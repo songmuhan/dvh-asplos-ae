@@ -196,11 +196,7 @@ if [[ $SINGLE_WORKLOAD ]]; then
 	pick_test $SINGLE_WORKLOAD
 	mysql_option='--max-requests'
 else
-	while :
-	do
-		# This is an inline function, and it has 'break' in it.
-		show_tests
-	done
+	show_tests
 	echo -n "Enter test name: "
 	read TEST_DESC
 fi
